@@ -11,26 +11,26 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <!-- <header class="header">
+  <header class="header">
   <div class="container">
     <div class="header__inner">
-      <a class="header__logo" href="/" aria-label="На главную">
+      <a class="header__logo" href="/">
         <img class="header__logo-img" src="assets/logo.png" alt="Логотип">
       </a>
 
       <nav class="nav header__nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">О НАС</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">ПРОЕКТЫ</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">УСЛУГИ</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">КОНТАКТЫ</a></li>
+        <ul class="header-nav__list nav__list">
+          <li class="nav__item"><a class="nav__link" href="#about-section">О НАС</a></li>
+          <li class="nav__item"><a class="nav__link" href="#project-section">ПРОЕКТЫ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#services-section">УСЛУГИ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact-section">КОНТАКТЫ</a></li>
         </ul>
       </nav>
     </div>
   </div>
-</header> -->
+</header>
 <main class="main">
-  <section class="main-section">
+  <section id="main-section" class="main-section">
     <div class="container">
       <div class="main-section__inner">
         <h1 class="main-section__title">Современные и стильные<br> интерьеры для комфортной жизни</h1>
@@ -40,7 +40,7 @@
       </div>
     </div>
   </section>
-  <section class="about-section">
+  <section id="about-section" class="about-section">
     <div class="container">
       <div class="about-section__inner">
         <h2 class="about-section__title section-title">О НАС</h2>
@@ -49,7 +49,7 @@
       </div>
     </div>
   </section>
-  <section class="project-section">
+  <section id="project-section" class="project-section">
     <div class="container">
       <div class="project-section__inner">
         <h2 class="project-section__title section-title">ПРОЕКТЫ</h2>
@@ -72,7 +72,7 @@
       </div>
     </div>
   </section>
-  <section class="services-section">
+  <section id="services-section" class="services-section">
     <div class="container">
       <div class="services-section__inner">
         <h2 class="services-section__title section-title">УСЛУГИ</h2>
@@ -95,6 +95,35 @@
       </div>
     </div>
   </section>
+  <div class="full-screen">
+    <h3 class="full-screen__title item-title">Проект  Двухкомнтаной квартиры в ЖК Лесной Пейзаж</h3>
+  </div>
+  <section id="contact-section" class="contact-section">
+    <div class="container">
+      <div class="contact-section__inner">
+        <h2 class="contact-section__title section-title">КОНТАКТЫ</h2>
+        <div class="contact-section__wrap">
+          <a href="tel:+79358954535" class="contact-section__mobile">+7 935  895-45-35</a>
+          <a href="mailto:hello@mail.com" class="contact-section__mail">hello@mail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <nav class="nav footer__nav" aria-label="Основная навигация">
+        <ul class="footer-nav__list nav__list">
+          <li class="nav__item"><a class="nav__link" href="#about-section">О НАС</a></li>
+          <li class="nav__item"><a class="nav__link" href="#project-section">ПРОЕКТЫ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#services-section">УСЛУГИ</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact-section">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+      <p class="footer__text">студия дизайна интерьера Метрика — 2023</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

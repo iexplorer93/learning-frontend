@@ -13,6 +13,10 @@ a {
   --text-color: hsl(0, 0%, 7%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(0, 0%, 96%);
   font-family: var(--main-font);
@@ -24,18 +28,50 @@ body {
   padding: 0 15px;
 }
 
-/* .header__inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 70px;
+}
+
+.header-nav__list {
+  color: var(--text-color);
 }
 
 .nav__list{
   display: flex;
   gap: 60px;
-  color: var(--text-color);
-} */
+}
+
+.nav__item {
+  transition: opacity 0.2s ease;
+  position: relative;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+.nav__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-color);
+  opacity: 0.5;
+  transition: width 0.3s ease;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+}
+
+.nav__item:hover {
+  opacity: 0.5;
+}
 
 .main-section__title {
   font-size: clamp(28px, 5vw, 60px);
@@ -182,4 +218,93 @@ body {
 
 .services-section__item-title {
   color: hsl(0, 0%, 100%);
+}
+
+.full-screen {
+  background-image: url(/assets/full_house.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 717px;
+  position: relative;
+  margin-bottom: 190px;
+}
+
+.full-screen__title {
+  color: hsl(0, 0%, 100%);
+  line-height: 31px;
+  position: absolute;
+  left: 125px;
+  bottom: 60px;
+  max-width: 443px;
+}
+
+.contact-section__title {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.contact-section__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -35px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon-iphone.png);
+  
+}
+
+.contact-section {
+  margin-bottom: 150px;
+}
+
+.contact-section__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.contact-section__mobile {
+  font-size: 60px;
+  line-height: 61px;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+}
+
+.contact-section__mail {
+  display: inline-block;
+  position: relative;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  opacity: 0.5;
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 10px;
+}
+
+.footer {
+  background-color: var(--text-color);
+  padding: 60px 0 30px 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-nav__list {
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 87px;
+}
+
+.footer__text {
+  color: hsl(0, 0%, 100%);
+  opacity: 0.5;
+  font-size: 20px;
+  letter-spacing: -0.03em;
 }
