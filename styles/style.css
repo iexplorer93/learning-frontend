@@ -92,7 +92,7 @@ body {
   margin-bottom: 150px;
 }
 
-.main-section__img--text {
+.main-section__img-text {
   color: hsl(0, 0%, 100%);
   max-width: 430px;
   letter-spacing: -0.03em;
@@ -267,7 +267,7 @@ body {
 }
 
 .contact-section {
-  margin-bottom: 150px;s
+  margin-bottom: 150px;
 }
 
 .contact-section__wrap {
