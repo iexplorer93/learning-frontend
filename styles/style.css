@@ -262,12 +262,12 @@ body {
   top: -35px;
   width: 24px;
   height: 24px;
-  background-image: url(/assets/icon-iphone.png);
+  background-image: url(../assets/icon-iphone.png);
   
 }
 
 .contact-section {
-  margin-bottom: 150px;
+  margin-bottom: 150px;s
 }
 
 .contact-section__wrap {
