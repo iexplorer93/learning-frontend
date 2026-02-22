@@ -231,7 +231,7 @@ body {
 }
 
 .full-screen {
-  background-image: url(/assets/full_house.jpg);
+  background-image: url(../assets/full_house.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
