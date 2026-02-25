@@ -432,4 +432,8 @@ body {
   .services-section__item-img {
     height: 274px;
   }
+  .services-section__btn {
+    padding: 36px 0;
+    font-size: 22px;
+  }
 }
