@@ -132,10 +132,14 @@ body {
   text-align: center;
   padding: 20px 40px;
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .about-section__link:hover {
+  opacity: 0.9;
+}
+
+.about-section__link:active {
   transform: scale(0.98);
 }
 
@@ -212,8 +216,19 @@ body {
   padding-bottom: 34px;
 }
 
+.services-section__item-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 80px;
+  margin-bottom: 104px;
+}
+
 .services-section__item {
-  margin-bottom: 60px;
+  width: calc(50% - 5.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .services-section__item:last-child {
@@ -222,14 +237,35 @@ body {
 
 .services-section__item-img {
   width: 100%;
-  height: 270px;
+  height: 388px;
   object-fit: cover;
   display: block;
-  margin-bottom: 15px;
 }
 
 .services-section__item-title {
   color: hsl(0, 0%, 100%);
+}
+
+.services-section__btn {
+  background-color: hsl(0, 76%, 39%);
+  width: 100%;
+  border-radius: 5px;
+  padding: 56px 0;
+  font-family: var(--main-font);
+  font-size: 30px;
+  letter-spacing: -0.03em;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.services-section__btn:hover {
+  opacity: 0.9;
+}
+
+.services-section__btn:active {
+  transform: scale(0.98);
 }
 
 .full-screen {
@@ -264,7 +300,6 @@ body {
   width: 24px;
   height: 24px;
   background-image: url(../assets/icon-iphone.png);
-  
 }
 
 .contact-section {
@@ -320,46 +355,30 @@ body {
   letter-spacing: -0.03em;
 }
 
-/* @media (max-width: 1100px) {
-.main-section__inner, .about-section__inner,
-.project-section__inner, .full-screen,
-.contact-section {
-  margin-bottom: 80px;
-}
-.services-section {
-  padding: 80px 0 80px;
-}
-.project-section__item {
-  margin-bottom: 50px;
-}
-.footer-nav__list {
-  padding-bottom: 55px;
-}
-}
-
-@media (max-width: 768px) {
-  .project-section__link {
-    padding: 40px 0 40px 0;
-  }
-} */
-
 @media (max-width: 1100px) {
   .main-section__inner, .about-section__inner,
   .project-section__inner, .full-screen,
   .contact-section {
     margin-bottom: 120px;
   }
-
   .container {
     width: 100%;
   }
-
   .project-section__item {
     margin-bottom: 80px;
   }
-
   .project-section__item:last-of-type {
     margin-bottom: 100px;
+  }
+  .services-section__item {
+    width: calc(50% - 5px);
+    gap: 15px;
+  }
+  .services-section {
+    padding: 150px 0 120px 0;
+  }
+  .services-section__item-wrap {
+    margin-bottom: 80px;
   }
 }
 
@@ -369,39 +388,48 @@ body {
   .contact-section {
     margin-bottom: 80px;
   }
-
   .main-section__title {
     margin-bottom: 25px;
   }
-
   .about-section__title, 
   .project-section__title {
     margin-bottom: 20px;
   }
-
   .about-section__link {
     padding: 14px 27px;
     font-size: 16px;
   }
-
   .project-section__img {
     margin-bottom: 20px;
   }
-
   .project-section__item-title {
     margin-bottom: 11px;
   }
-
   .project-section__item {
     margin-bottom: 49px;
   }
-
   .project-section__item:last-of-type {
     margin-bottom: 60px;
   }
-
   .project-section__link {
     font-size: 22px;
     padding: 37px 0 37px 0;
+  }
+  .services-section {
+    padding: 80px 0;
+  }
+  .services-section__title {
+    padding-bottom: 20px;
+  }
+  .services-section__item-wrap {
+    margin-bottom: 60px;
+    row-gap: 60px;
+  }
+  .services-section__item {
+    width: 100%;
+    gap: 10px;
+  }
+  .services-section__item-img {
+    height: 274px;
   }
 }
