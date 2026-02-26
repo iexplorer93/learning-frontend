@@ -74,7 +74,8 @@ body {
 }
 
 .main-section__inner, .about-section__inner,
-.project-section__inner, .full-screen {
+.project-section__inner, .full-screen,
+.services-section {
   margin-bottom: 150px;
 }
 
@@ -285,6 +286,46 @@ body {
   transform: scale(0.98);
 }
 
+.reviews-section__title {
+  margin-bottom: 30px;
+}
+
+.reviews-section__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reviews-section__card {
+  width: calc(50% - 25px);
+}
+
+.reviews-section__card-title {
+  margin-bottom: 14px;
+  font-size: clamp(25px, 3.9vw, 45px);
+  line-height: 61px;
+  letter-spacing: -0.03em;
+}
+
+.reviews-section__card-descr {
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+}
+
+.card__descr-main {
+  margin-bottom: 22px;
+}
+
+
+
+
+
+
+
+
+
+
 .full-screen {
   background-image: url(../assets/full_house.jpg);
   background-repeat: no-repeat;
@@ -406,6 +447,16 @@ body {
     font-size: 20px;
     line-height: 27px;
   }
+  .reviews-section__card-title {
+    line-height: 48px;
+  }
+  .reviews-section__card-descr {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .card__descr-main {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -470,5 +521,24 @@ body {
     padding: 5px 23px;
     font-size: 14px;
     line-height: 19px;
+  }
+  .reviews-section__title {
+    margin-bottom: 22px;
+  }
+  .reviews-section__wrapper {
+    gap: 80px;
+  }
+  .reviews-section__card {
+    width: 100%;
+  }
+  .reviews-section__card-title {
+    margin-bottom: 10px;
+  }
+  .reviews-section__card-descr {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .card__descr-main {
+    margin-bottom: 16px;
   }
 }
