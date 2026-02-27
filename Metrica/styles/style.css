@@ -51,6 +51,7 @@ body {
   font-size: 18px;
   line-height: 100%;
   letter-spacing: -0.03em;
+  transition: width 0.3s ease;
 }
 
 .nav__item::after {
@@ -62,7 +63,6 @@ body {
   height: 1px;
   background-color: var(--text-color);
   opacity: 0.5;
-  transition: width 0.3s ease;
 }
 
 .nav__item:hover::after {
@@ -244,7 +244,7 @@ body {
   display: block; 
 }
 
-.service-section__img-box {
+.service-section__badge {
   position: absolute;
   left: 30px;
   top: 31px;
@@ -252,7 +252,7 @@ body {
   background-color: hsl(0, 76%, 39%);
 }
 
-.service-section__img-text {
+.service-section__badge-text {
   padding: 5px 21px;
   font-size: 22px;
   letter-spacing: -0.03em;
@@ -302,8 +302,9 @@ body {
   width: calc(50% - 25px);
 }
 
-.card-big {
-  width: 861px;
+.reviews-section__card--wide {
+  flex-basis: 100%;
+  max-width: 861px;
 }
 
 .reviews-section__card-title {
@@ -319,7 +320,7 @@ body {
   letter-spacing: -0.03em;
 }
 
-.card__descr-main {
+.reviews-section__text--main {
   margin-bottom: 22px;
 }
 
@@ -444,11 +445,11 @@ body {
   .services-section__item-wrap {
     margin-bottom: 80px;
   }
-  .service-section__img-box {
+  .service-section__badge {
     left: 32px;
     top: 32px;
   }
-  .service-section__img-text {
+  .service-section__badge-text {
     padding: 7px 26px;
     font-size: 20px;
     line-height: 27px;
@@ -463,11 +464,11 @@ body {
     font-size: 20px;
     line-height: 27px;
   }
-  .card__descr-main {
+  .reviews-section__text--main {
     margin-bottom: 20px;
   }
-  .card-big {
-  width: 694px;
+  .reviews-section__card--wide {
+    max-width: 694px;
   }
 }
 
@@ -525,11 +526,11 @@ body {
     padding: 36px 0;
     font-size: 22px;
   }
-  .service-section__img-box {
+  .service-section__badge {
     left: 23px;
     top: 24px;
   }
-  .service-section__img-text {
+  .service-section__badge-text {
     padding: 5px 23px;
     font-size: 14px;
     line-height: 19px;
@@ -542,7 +543,10 @@ body {
     margin-bottom: 80px;
   }
   .reviews-section__card {
-    width: 100%;
+    flex-basis: 100%;
+  }
+  .reviews-section__card--wide {
+    max-width: none;
   }
   .reviews-section__card-title {
     margin-bottom: 10px;
@@ -551,7 +555,7 @@ body {
     font-size: 16px;
     line-height: 22px;
   }
-  .card__descr-main {
+  .reviews-section__text--main {
     margin-bottom: 16px;
   }
 }
