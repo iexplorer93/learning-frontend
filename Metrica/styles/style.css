@@ -294,10 +294,16 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  row-gap: 50px;
+  margin-bottom: 157px;
 }
 
 .reviews-section__card {
   width: calc(50% - 25px);
+}
+
+.card-big {
+  width: 861px;
 }
 
 .reviews-section__card-title {
@@ -447,6 +453,9 @@ body {
     font-size: 20px;
     line-height: 27px;
   }
+  .reviews-section__wrapper {
+    margin-bottom: 120px;
+  }
   .reviews-section__card-title {
     line-height: 48px;
   }
@@ -456,6 +465,9 @@ body {
   }
   .card__descr-main {
     margin-bottom: 20px;
+  }
+  .card-big {
+  width: 694px;
   }
 }
 
@@ -527,6 +539,7 @@ body {
   }
   .reviews-section__wrapper {
     gap: 80px;
+    margin-bottom: 80px;
   }
   .reviews-section__card {
     width: 100%;
