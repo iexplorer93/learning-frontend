@@ -295,7 +295,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;
-  margin-bottom: 157px;
+  margin-bottom: 150px;
 }
 
 .reviews-section__card {
@@ -324,32 +324,114 @@ body {
   margin-bottom: 22px;
 }
 
-
-
-
-
-
-
-
-
-
-.full-screen {
-  background-image: url(../assets/full_house.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 717px;
+.galery-section {
   position: relative;
+  margin-bottom: 150px;
 }
 
-.full-screen__title {
-  color: hsl(0, 0%, 100%);
-  line-height: 31px;
+.galery-section__title-wrapper {
   position: absolute;
-  left: 125px;
-  bottom: 60px;
-  max-width: 443px;
+  z-index: 100;
+  top: 67px;
+  left: 124px;
 }
+
+.galery-section__title {
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  color: hsl(0, 0%, 100%);
+}
+
+.galery-section__slides {
+  position: relative;
+  height: 717px;
+}
+
+.galery-section__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.slide-active {
+  opacity: 1;
+}
+
+.galery-section__img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.galery-section__descr-wrapper {
+  position: absolute;
+  top: 575px;
+  left: 124px;
+}
+
+.galery-section__descr {
+  max-width: 443px;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: -0.03em;
+  color: hsl(0, 0%, 100%);
+}
+
+.galery-section__controls-wrapper {
+  position: absolute;
+  bottom: 165px;
+  left: 115px;
+}
+
+.galery-section__controls {
+  display: flex;
+}
+
+.galery-section__contol--btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.galery-section__contol--btn:hover {
+  opacity: 1;
+}
+
+.galery-section__contol--btn::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 4px solid hsl(0, 0%, 100%);
+  border-top: none;
+  border-right: none;
+}
+
+.galery-section__control--prev::before {
+  transform: rotate(45deg);
+}
+
+.galery-section__control--next::before {
+  transform: rotate(-135deg);
+}
+
+
+
+
+
+
+
+
 
 .contact-section__title {
   position: relative;
@@ -422,12 +504,9 @@ body {
 
 @media (max-width: 1100px) {
   .main-section__inner, .about-section__inner,
-  .project-section__inner, .full-screen,
+  .project-section__inner, .galery-section,
   .contact-section {
     margin-bottom: 120px;
-  }
-  .container {
-    width: 100%;
   }
   .project-section__item {
     margin-bottom: 80px;
@@ -470,11 +549,35 @@ body {
   .reviews-section__card--wide {
     max-width: 694px;
   }
+  .galery-section__title-wrapper {
+    top: 80px;
+    left: 50px;
+  }
+  .galery-section__title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .galery-section__slides {
+    height: 536px;
+  }
+  .galery-section__controls-wrapper {
+    bottom: 152px;
+    left: 41px;
+  }
+  .galery-section__descr-wrapper {
+    top: 388px;
+    left: 50px;
+  }
+  .galery-section__descr {
+    font-size: 25px;
+    line-height: 34px;
+    max-width: 377px;
+  }
 }
 
 @media (max-width: 768px) {
   .main-section__inner, .about-section__inner,
-  .project-section__inner, .full-screen,
+  .project-section__inner, .galery-section,
   .contact-section {
     margin-bottom: 80px;
   }
@@ -557,5 +660,36 @@ body {
   }
   .reviews-section__text--main {
     margin-bottom: 16px;
+  }
+  .galery-section__title-wrapper {
+    top: 61px;
+    left: 12px;
+  }
+  .galery-section__title {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .galery-section__slides {
+    height: 408px;
+  }
+  .galery-section__descr-wrapper {
+    top: 296px;
+    left: 13px;
+  }
+  .galery-section__descr {
+    font-size: 19px;
+    line-height: 26px;
+    max-width: 287px;
+  }
+  .galery-section__controls-wrapper {
+    top: 50%;
+    left: 0;
+    width: 100%;
+  }
+  .galery-section__controls {
+    justify-content: space-between;
+  }
+  .galery-section__contol--btn {
+    opacity: 1;
   }
 }
