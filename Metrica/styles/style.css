@@ -10,7 +10,7 @@ a {
 
 :root {
   --main-font: "Manrope", sans-serif;
-  --text-color: hsl(0, 0%, 7%);
+  --text-color: rgb(18, 18, 18);
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: hsl(0, 0%, 96%);
+  background-color: rgb(245, 245, 245);
   font-family: var(--main-font);
 }
 
@@ -42,7 +42,7 @@ body {
 
 .nav__list{
   display: flex;
-  gap: 60px;
+  gap: 56px;
 }
 
 .nav__item {
@@ -98,7 +98,7 @@ body {
 }
 
 .main-section__img-text {
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   max-width: 430px;
   letter-spacing: -0.03em;
   font-size: clamp(14px, 1.75vw, 20px);
@@ -127,9 +127,9 @@ body {
 
 .about-section__link {
   display: inline-block;
-  background-color: hsl(0, 76%, 39%);
+  background-color: rgb(175, 24, 24);
   border-radius: 5px;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px 40px;
   font-size: 20px;
@@ -173,7 +173,7 @@ body {
 .project-section__item-link {
   font-size: clamp(14px, 1.75vw, 20px);
   letter-spacing: -0.03em;
-  color: hsl(0, 76%, 39%);
+  color: rgb(175, 24, 24);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -195,16 +195,16 @@ body {
   width: 100%;
   text-align: center;
   padding: 56px 0 56px 0;
-  border: 1px solid #AD1818;
-  color: hsl(0, 76%, 39%);
+  border: 1px solid rgb(173, 24, 24);
+  color: rgb(175, 24, 24);
   font-size: 30px;
   letter-spacing: -0.03em;
   transition: all 0.3s ease;
 }
 
 .project-section__link:hover {
-  background-color: hsl(0, 76%, 39%);
-  color: hsl(0, 0%, 100%);
+  background-color: rgb(175, 24, 24);
+  color: rgb(255, 255, 255);
 }
 
 .services-section {
@@ -213,7 +213,7 @@ body {
 }
 
 .services-section__title {
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   padding-bottom: 34px;
 }
 
@@ -249,7 +249,7 @@ body {
   left: 30px;
   top: 31px;
   border-radius: 5px;
-  background-color: hsl(0, 76%, 39%);
+  background-color: rgb(175, 24, 24);
 }
 
 .service-section__badge-text {
@@ -257,22 +257,22 @@ body {
   font-size: 22px;
   letter-spacing: -0.03em;
   line-height: 30px;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
 }
 
 .services-section__item-title {
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
 }
 
 .services-section__btn {
-  background-color: hsl(0, 76%, 39%);
+  background-color: rgb(175, 24, 24);
   width: 100%;
   border-radius: 5px;
   padding: 56px 0;
   font-family: var(--main-font);
   font-size: 30px;
   letter-spacing: -0.03em;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -340,7 +340,7 @@ body {
   font-size: 22px;
   line-height: 30px;
   letter-spacing: -0.03em;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
 }
 
 .galery-section__slides {
@@ -379,7 +379,7 @@ body {
   font-size: 30px;
   line-height: 41px;
   letter-spacing: -0.03em;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
 }
 
 .galery-section__controls-wrapper {
@@ -412,7 +412,7 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  border: 4px solid hsl(0, 0%, 100%);
+  border: 4px solid rgb(255, 255, 255);
   border-top: none;
   border-right: none;
 }
@@ -425,20 +425,28 @@ body {
   transform: rotate(-135deg);
 }
 
-
-
-
-
-
-
-
-
-.contact-section__title {
-  position: relative;
-  margin-bottom: 32px;
+.contact-section {
+  margin-bottom: 150px;
 }
 
-.contact-section__title::before {
+.contact-section__title {
+  margin-bottom: 74px;
+}
+
+.contact-section__wrapper {
+  display: flex;
+  gap: 104px;
+}
+
+.contact-section__mobile {
+  font-size: clamp(25px, 5.2vw, 60px);
+  line-height: 61px;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
+  position: relative;
+}
+
+.contact-section__mobile::before {
   content: "";
   display: block;
   position: absolute;
@@ -447,24 +455,11 @@ body {
   width: 24px;
   height: 24px;
   background-image: url(../assets/icon-iphone.png);
+  transition: color 0.2s ease;
 }
 
-.contact-section {
-  margin-bottom: 150px;
-}
-
-.contact-section__wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-.contact-section__mobile {
-  font-size: clamp(25px, 5.2vw, 60px);
-  line-height: 61px;
-  letter-spacing: -0.03em;
-  color: var(--text-color);
+.contact-section__mobile:hover { 
+  color: rgba(18, 18, 18, 0.5);
 }
 
 .contact-section__mail {
@@ -473,10 +468,25 @@ body {
   font-size: clamp(25px, 5.2vw, 60px);
   line-height: 60px;
   letter-spacing: -0.03em;
-  color: var(--text-color);
-  opacity: 0.5;
-  border-bottom: 2px solid var(--text-color);
-  padding-bottom: 10px;
+  color: rgb(18, 18, 18);
+  border-bottom: 2px solid rgb(18, 18, 18);
+  transition: all 0.2s ease;
+}
+
+.contact-section__mail::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/icon-mail.png);
+}
+
+.contact-section__mail:hover {
+  color: rgba(18, 18, 18, 0.5);
+  border-bottom: 2px solid rgba(18, 18, 18, 0.5)
 }
 
 .footer {
@@ -691,5 +701,40 @@ body {
   }
   .galery-section__contol--btn {
     opacity: 1;
+  }
+  .contact-section__wrapper {
+    flex-wrap: wrap;
+    gap: 58px;
+  }
+  .contact-section__title {
+    margin-bottom: 58px;
+  }
+  .contact-section__left-wrap,
+  .contact-section__right-wrap {
+    width: 100%;
+  }
+  .contact-section__mobile::before {
+    top: -45px;
+  }
+  .contact-section__mail::before {
+    top: -34px;
+  }
+  .contact-section__mail {
+    line-height: 28px;
+  }
+  .footer {
+    padding: 30px 0 26px 0;
+  }
+  .footer-nav__list {
+    padding-bottom: 41px;
+  }
+  .footer__text {
+    font-size: 13px;
+  }
+  .nav__item {
+    font-size: 12px;
+  }
+  .nav__list {
+    gap: 30px;
   }
 }
