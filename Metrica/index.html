@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<!--   <header class="header">
+  <header class="header">
   <div class="container">
     <div class="header__inner">
       <a class="header__logo" href="/">
@@ -26,9 +26,12 @@
           <li class="nav__item"><a class="nav__link" href="#contact-section">КОНТАКТЫ</a></li>
         </ul>
       </nav>
+      <button class="burger-btn" type="button">
+        <span class="burger-btn__line"></span>
+      </button>
     </div>
   </div>
-</header> -->
+</header>
 <main class="main">
   <section id="main-section" class="main-section">
     <div class="container">
@@ -237,12 +240,16 @@
     <div class="popup__input-wrapper">
       <input type="text" class="popup__input" id="popup__name" placeholder="Имя">
       <input type="email" class="popup__input" id="popup__mail" placeholder="Электронная почта">
-      <input type="number" class="popup__input" id="popup__number" placeholder="Номер телефона">
+      <input type="text" class="popup__input" id="popup__number" placeholder="Номер телефона">
     </div>
     <button class="popup__button">Отправить</button>
   </div>
 </div>
+<div class="burger">
+  <div class="burger__content"></div>
+</div>
 
+<script src="js/burger.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/popup.js"></script>
 </body>
