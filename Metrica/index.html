@@ -59,17 +59,17 @@
         <article class="project-section__item">
           <img src="assets/project-1.jpg" alt="ЖК Правобережный" class="project-section__img">
           <h3 class="project-section__item-title item-title">ЖК ПРАВОБЕРЕЖНЫЙ — 112 м² — 2023</h3>
-          <a href="#" type="button" class="project-section__item-link">Подробнее</a>
+          <a href="#" class="project-section__item-link">Подробнее</a>
         </article>
         <article class="project-section__item">
           <img src="assets/project-2.jpg" alt="ЖК Норвежский" class="project-section__img">
           <h3 class="project-section__item-title item-title">ЖК НОРВЕЖСКИЙ ПАРК — 75 М² — 2023</h3>
-          <a href="#" type="button" class="project-section__item-link">Подробнее</a>
+          <a href="#" class="project-section__item-link">Подробнее</a>
         </article>
         <article class="project-section__item">
           <img src="assets/project-3.jpg" alt="ЖК Сосновое" class="project-section__img">
           <h3 class="project-section__item-title item-title">ЖК СОСНОВСКИЕ ОЗЕРА — 94 М² — 2022</h3>
-          <a href="#" type="button" class="project-section__item-link">Подробнее</a>
+          <a href="#" class="project-section__item-link">Подробнее</a>
         </article>
         <a href="#" class="project-section__link">Смотреть все проекты</a>
       </div>
@@ -82,29 +82,29 @@
         <div class="services-section__item-wrap">
           <article class="services-section__item"> 
             <img src="assets/services-1.jpg" alt="Планировочное решение" class="services-section__item-img">
-            <div class="service-section__badge">
-            <p class="service-section__badge-text">от 2500₽/м²</p>
+            <div class="services-section__badge">
+            <p class="services-section__badge-text">от 2500₽/м²</p>
             </div>
           <h3 class="services-section__item-title item-title">Планировочное решение — от 2500₽/м²</h3>
           </article>
           <article class="services-section__item">
             <img src="assets/services-2.jpg" alt="Дизайн-проект" class="services-section__item-img">
-            <div class="service-section__badge">
-            <p class="service-section__badge-text">от 3000₽/м²</p>
+            <div class="services-section__badge">
+            <p class="services-section__badge-text">от 3000₽/м²</p>
             </div>
             <h3 class="services-section__item-title item-title">Дизайн-проект — от 3000₽/м²</h3>
           </article>
           <article class="services-section__item">
             <img src="assets/services-3.jpg" alt="Авторский надзор" class="services-section__item-img">
-            <div class="service-section__badge">
-            <p class="service-section__badge-text">от 30 000₽/мес</p>
+            <div class="services-section__badge">
+            <p class="services-section__badge-text">от 30 000₽/мес</p>
             </div>
             <h3 class="services-section__item-title item-title">Авторский надзор — от 30 000₽ в месяц</h3>
           </article>
           <article class="services-section__item">
             <img src="assets/services-4.jpg" alt="Комплектация — 5%" class="services-section__item-img">
-            <div class="service-section__badge">
-            <p class="service-section__badge-text">5% от стоимости</p>
+            <div class="services-section__badge">
+            <p class="services-section__badge-text">5% от стоимости</p>
             </div>
             <h3 class="services-section__item-title item-title">Комплектация — 5% от стоимости спецификации</h3>
           </article>
@@ -190,13 +190,13 @@
     <div class="galery-section__controls-wrapper">
       <div class="container">
         <div class="galery-section__controls">
-          <button class="galery-section__contol--btn galery-section__control--prev"></button>
-          <button class="galery-section__contol--btn galery-section__control--next"></button>
+          <button class="galery-section__control--btn galery-section__control--prev"></button>
+          <button class="galery-section__control--btn galery-section__control--next"></button>
         </div>
       </div>
     </div>
   </section>
-  <section class="contact-section">
+  <section class="contact-section" id="contact-section">
     <div class="container">
       <div class="contact-section__inner">
         <h2 class="contact-section__title section-title">КОНТАКТЫ</h2>
@@ -246,7 +246,24 @@
   </div>
 </div>
 <div class="burger">
-  <div class="burger__content"></div>
+  <div class="burger__content">
+    <div class="burger__logo-wrapper">
+      <img src="assets/logo.png" alt="логотип" class="burger__logo">
+    </div>
+    <nav class="burger__nav">
+      <ul class="burger__nav-list">
+        <li class="burger__nav-item"><a href="#about-section">О НАС</a></li>
+        <li class="burger__nav-item"><a href="#project-section">ПРОЕКТЫ</a></li>
+        <li class="burger__nav-item"><a href="#services-section">УСЛУГИ</a></li>
+        <li class="burger__nav-item"><a href="#contact-section">КОНТАКТЫ</a></li>
+      </ul>
+    </nav>
+    <div class="burger__contact-wrapper">
+      <p class="burger__contact-text">для связи:</p>
+      <a href="tel:+79358954535" class="burger__contact-mobile">+7 935 895-45-35</a>
+      <a href="mailto:hello@mail.com" class="burger__contact-mail">hello@mail.com</a>
+    </div>
+  </div>
 </div>
 
 <script src="js/burger.js"></script>
