@@ -12,13 +12,13 @@
 </head>
 <body>
   <div class="intro">
-    <header class="header" id="header">
+    <header class="header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo-wrapper">
             <a href="#" class="header__logo">ORLOV</a>
           </div>
-          <nav class="header__nav">
+          <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#fresh-project" class="nav__link">портфолио</a></li>
               <li class="nav__item"><a href="#skills" class="nav__link">компетенции</a></li>
@@ -26,10 +26,14 @@
               <li class="nav__item"><a href="#contacts" class="nav__link">контакты</a></li>
             </ul>
           </nav>
+          <button class="burger-btn" type="button">
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
+          </button>
         </div>
       </div>
     </header>
-    <main class="main-section">
       <section class="hero" id="hero">
         <div class="container">
           <div class="hero__inner">
@@ -40,8 +44,9 @@
           </div>
         </div>
       </section>
-    </main>
   </div>
+
+  <main>
     <section id="fresh-project" class="fresh-project">
       <div class="container">
         <div class="fresh-project__inner">
@@ -49,7 +54,7 @@
           <div class="fresh-project__box">
             <img src="./assets/fresh-1.png" alt="Дизайн сайта" class="fresh-project__box-img">
             <h3 class="fresh-project__box-title">Realhome</h3>
-            <p class="fresh-project__box-descr">дизайн,верстка, настройка</p>
+            <p class="fresh-project__box-descr">дизайн, верстка, настройка</p>
           </div>
           <div class="fresh-project__box">
             <img src="./assets/fresh-2.png" alt="Разработка интерфейса" class="fresh-project__box-img">
@@ -61,7 +66,7 @@
             <h3 class="fresh-project__box-title">Fesiyen</h3>
             <p class="fresh-project__box-descr">разработка интерфейса</p>
           </div>
-          <a href="#fresh-project" class="fresh-project__link">Смотреть все проекты</a>
+          <a href="#" class="fresh-project__link">Смотреть все проекты</a>
         </div>
       </div>
     </section>
@@ -72,22 +77,22 @@
           <ul class="skills__list">
             <li class="skills__item">
               <img src="./assets/icon_html.png" alt="html" class="skills__icon">
-              <h3 class="skills__list-title">HTML и CSS</h3>
+              <h3 class="skills__item-title">HTML и CSS</h3>
               <p class="skills__text">это основа фронтенд разработки. Умение создавать и правильно структурировать HTML-документы, а также применять стили к этим документам на CSS, является обязательным навыком для каждого фронтенд разработчика.</p>
             </li>
             <li class="skills__item">
               <img src="./assets/icon_js.png" alt="JavaScript" class="skills__icon">
-              <h3 class="skills__list-title">JavaScript</h3>
+              <h3 class="skills__item-title">JavaScript</h3>
               <p class="skills__text">это язык программирования, который используется для создания динамического и интерактивного пользовательского интерфейса. Хороший фронтенд разработчик должен быть знаком с основами JavaScript, включая работу с DOM-деревом, асинхронными запросами и манипуляцией данными на стороне клиента.</p>
             </li>
             <li class="skills__item">
               <img src="./assets/icon_framework.png" alt="framework" class="skills__icon">
-              <h3 class="skills__list-title">Работа с библиотеками и фреймворками</h3>
+              <h3 class="skills__item-title">Работа с библиотеками и фреймворками</h3>
               <p class="skills__text">фронтенд разработчики должны быть знакомы с различными библиотеками и фреймворками, такими как React, Angular, Vue и другими. Умение использовать готовые решения, адаптировать их под нужды проекта и расширять их функциональность, является очень важным навыком.</p>
             </li>
             <li class="skills__item">
               <img src="./assets/icon_adaptive.png" alt="mobile" class="skills__icon">
-              <h3 class="skills__list-title">Разработка для мобильных <br>устройств и адаптивная верстка</h3>
+              <h3 class="skills__item-title">Разработка для мобильных <br>устройств и адаптивная верстка</h3>
               <p class="skills__text">фронтенд разработчики должны быть знакомы с различными библиотеками и фреймворками, такими как React, Angular,    Vue и другими. Умение использовать готовые решения, адаптировать их под нужды проекта и расширять их функциональность, является очень важным навыком.</p>
             </li>
           </ul>
@@ -124,8 +129,8 @@
       </div>
     </section>
     <section class="contacts" id="contacts">
+      <div class="container">
         <div class="contacts__inner">
-          <div class="container">
           <div class="contacts__left">
             <p class="contacts__left-title">для связи:</p>
             <div class="contacts__left-box">
@@ -134,12 +139,14 @@
               <a href="#" class="contacts__link">mail</a>
             </div>
           </div>
-          </div>
+          
           <div class="contacts__right">
             <img src="./assets/contacts.png" alt="Контакты" class="contacts__right-img">
           </div>
-        </div>
+        </div>      
+      </div>
     </section>
+  </main>  
     <footer class="footer">
       <div class="container">
         <p class="footer__text">Портфолио фронтенд-разработчика Саши Орлова</p>

@@ -37,11 +37,11 @@ a {
   --font-bold: 700;
 
   /* Layout */
-  --container-width: 1155px;
+  --container-width: 115.5rem;
 
   /* Radius */
-  --radius-sm: 10px;
-  --radius-md: 30px;
+  --radius-sm: 1rem;
+  --radius-md: 3rem;
 }
 
 .container {
@@ -55,9 +55,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 765px;
-  position: relative;
-  margin-bottom: 150px;
+  min-height: 76rem;
+  margin-bottom: 15rem;
 }
 
 .header {
@@ -83,12 +82,17 @@ a {
   transition: color 0.3s ease;
 }
 
+.burger-btn {
+ 
+}
+
 .header__logo-wrapper {
   width: 13rem;
   height: 3.9rem;
   background-color: var(--color-bg);
   border-radius: 100px;
   text-align: center;
+  padding-right: 4px;
 }
 
 .header__logo {
@@ -99,8 +103,21 @@ a {
   line-height: 3.8rem;
 }
 
-.main-section {
-  background-color: var(--color-bg);
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-bottom: 10.6rem;
 }
 
 .hero__note {
@@ -108,8 +125,6 @@ a {
   letter-spacing: -0.03em;
   line-height: 2.6rem;
   max-width: 43rem;
-  position: absolute;
-  top: 33.5rem;
 }
 
 .hero__title {
@@ -118,8 +133,19 @@ a {
   line-height: 0.92;
   color: var(--accent-color);
   max-width: 960px;
-  position: absolute;
-  top: 470px;
+}
+
+@media (max-width: 960px) {
+  .nav {
+    display: none;
+  }
+}
+
+
+
+
+.main-section {
+  background-color: var(--color-bg);
 }
 
 .fresh-project {
@@ -199,7 +225,7 @@ a {
   margin-bottom: 1.6rem;
 }
 
-.skills__list-title {
+.skills__item-title {
   font-size: 3.5rem;
   letter-spacing: -0.03em;
   line-height: 4.6rem;
