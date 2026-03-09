@@ -53,18 +53,33 @@
           <h2 class="fresh-project__title section-title">Самые свежие проекты</h2>
           <div class="fresh-project__box">
             <img src="./assets/fresh-1.png" alt="Дизайн сайта" class="fresh-project__box-img">
-            <h3 class="fresh-project__box-title">Realhome</h3>
-            <p class="fresh-project__box-descr">дизайн, верстка, настройка</p>
+            <div class="fresh-project__box-wrapper">
+              <p class="fresh-project__box-badge">дизайн интерьера</p>
+              <div class="fresh-project__box-text">
+                <h3 class="fresh-project__box-title">Метрика</h3>
+                <p class="fresh-project__box-descr">верстка, настройка</p>
+              </div>
+            </div>
           </div>
           <div class="fresh-project__box">
-            <img src="./assets/fresh-2.png" alt="Разработка интерфейса" class="fresh-project__box-img">
-            <h3 class="fresh-project__box-title">GLASS</h3>
-            <p class="fresh-project__box-descr">разработка интерфейса</p>
+            <img src="./assets/fresh-2.png" alt="Дизайн сайта" class="fresh-project__box-img">
+            <div class="fresh-project__box-wrapper">
+              <p class="fresh-project__box-badge">презентация продукта</p>
+              <div class="fresh-project__box-text">
+                <h3 class="fresh-project__box-title">Nothing</h3>
+                <p class="fresh-project__box-descr">верстка, настройка</p>
+              </div>
+            </div>
           </div>
           <div class="fresh-project__box">
-            <img src="./assets/fresh-3.png" alt="Разработка интерфейса" class="fresh-project__box-img">
-            <h3 class="fresh-project__box-title">Fesiyen</h3>
-            <p class="fresh-project__box-descr">разработка интерфейса</p>
+            <img src="./assets/fresh-3.png" alt="Дизайн сайта" class="fresh-project__box-img">
+            <div class="fresh-project__box-wrapper">
+              <p class="fresh-project__box-badge">заказ путешествий</p>
+              <div class="fresh-project__box-text">
+                <h3 class="fresh-project__box-title">TOPTRIP</h3>
+                <p class="fresh-project__box-descr">верстка</p>
+              </div>
+            </div>
           </div>
           <a href="#" class="fresh-project__link">Смотреть все проекты</a>
         </div>
@@ -132,27 +147,37 @@
       <div class="container">
         <div class="contacts__inner">
           <div class="contacts__left">
-            <p class="contacts__left-title">для связи:</p>
-            <div class="contacts__left-box">
-              <a href="#" class="contacts__link">instagram</a>
-              <a href="#" class="contacts__link">telegram</a>
-              <a href="#" class="contacts__link">mail</a>
+            <p class="contacts__left-title">Для связи со мной заполните простую форму</p>
+            <div class="contacts__left-input-wrapper">
+              <input type="text" class="contacts__left-input" placeholder="Имя Фамилия">
+              <input type="email" class="contacts__left-input" placeholder="example@mail.com">
             </div>
+            <button class="contacts__left-btn">Отправить</button>
           </div>
-          
           <div class="contacts__right">
-            <img src="./assets/contacts.png" alt="Контакты" class="contacts__right-img">
+            <img src="./assets/contacts.png" class="contacts__right-img">
           </div>
-        </div>      
+        </div>
       </div>
     </section>
   </main>  
   <footer class="footer">
     <div class="container">
-      <p class="footer__text">Портфолио фронтенд-разработчика СашиОрлова</p>
-      <p class="footer__copy">Все права защищены. 2023</p>
+      <div class="footer__top-wrapper">
+        <p class="footer__top-wrapper--text footer__top--text">Портфолио фронтенд-разработчика Саши Орлова</p>
+        <div class="footer__top-wrapper--socials">
+          <a href="#" class="footer__top-wrapper--link footer__top--text">instagram</a>
+          <a href="#" class="footer__top-wrapper--link footer__top--text">telegram</a>
+          <a href="#" class="footer__top-wrapper--link footer__top--text">mail</a>
+        </div>
+      </div>
+      <div class="footer__bottom-wrapper">
+        <p class="footer__bottom-wrapper--copy footer__bottom--text">Все права защищены. 2023</p>
+        <p class="footer__bottom-wrapper--text footer__bottom--text">политика обработки данных</p>
+      </div>
     </div>
   </footer>
+
   <div class="burger">
     <div class="burger__content">
       <div class="burger__logo-wrapper logo-wrapper">
