@@ -729,30 +729,46 @@ a {
     padding-top: 5.1rem;
     height: 15rem;
   }
-  .footer__left-wrapper--text {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+  .footer__top-wrapper {
     margin-bottom: 4.3rem;
   }
-  .footer__left-wrapper--copy  {
-    font-size: 1.4rem;
-    line-height: 1.9rem;
-  }
-  .footer__right-socials {
-    margin-bottom: 3.8rem;
-  }
-  .footer__right-socials--link {
+  .footer__top--text {
     font-size: 1.6rem;
     line-height: 2.2rem;
   }
-  .footer__right-wrapper--text {
+  .footer__bottom--text {
     font-size: 1.4rem;
     line-height: 1.9rem;
   }
 }
 
 @media (max-width: 768px) {
-  
+  .footer {
+    padding-top: 4.7rem;
+    padding-bottom: 3.4rem;
+    height: auto;
+  }
+  .footer__top-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 22rem;
+    margin-bottom: 4rem;
+  }
+  .footer__top--text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .footer__top-wrapper--socials {
+    gap: 1.3rem;
+  }
+  .footer__bottom-wrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .footer__bottom--text {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
 }
 
 .burger {
