@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="main-section">
+    <section class="left-section">
+      <h2 class="left-section__title section-title">Новый пост</h2>
+      <form action="submit" class="left-section__form">
+        <input type="text" class="left-section__input" placeholder="Заголовок">
+        <textarea name="description" class="left-section__textarea" placeholder="Напиши пост"></textarea>
+      </form>
+      <button class="left-section__btn">Опубликовать</button>
+      <p class="error-msg"></p>
+    </section>
+    <section class="right-section">
+      <h2 class="right-section__title section-title">Лента</h2>
+      <p class="right-section__text">Тут пока пусто...</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
