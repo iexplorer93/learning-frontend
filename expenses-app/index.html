@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses APP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title">Учет расходов</h1>
+    <section class="expenses">
+      <div class="expenses__top">
+        <div class="expenses__top-input-wrapper">
+          <input type="number" class="expenses__top-input">
+          <span class="input-currency">руб.</span>
+        </div>
+        <div class="input__top-select-wrapper">
+          <select name="expenses-select" class="expenses__top-select">
+          <option value="cafe">Кафе и рестораны</option>
+          <option value="transport">Транспорт</option>
+          <option value="pharmacy">Аптека</option>
+          <option value="entertainment">Развлечения</option>
+          </select>
+        </div>
+        <button class="expenses__top-button">Добавить</button>
+      </div>
+
+      <div class="expenses__middle">
+        <div class="expenses__middle-card">
+          <h3 class="middle-card__title card-title">Финансовое состояние</h3>
+          <div class="expenses__middle-limit-wrapper">
+            <p class="expenses__middle-limit">Лимит: <span class="limit"></span></p>
+            <img src="./img/image 1.png" class="expenses__middle-limit-img">
+          </div>
+          <p class="expenses__middle-general">Всего:<span class="general-sum"></span></p>
+          <p class="expenses__middle-status">Статус:<span class="status-good"></span></p>
+        </div>
+        <div class="expenses__middle-card">
+          <h3 class="expenses__middle-history card-title">История:</h3>
+          <ol class="expenses__middle-history-list"></ol>
+        </div>
+      </div>
+
+      <div class="expenses__bottom"> 
+        <button class="expenses__bottom-button">Сбросить расходы</button>  
+      </div>
+    </section>
+  </div>
+
+  <div class="popup">
+    <div class="popup__content">
+      <div class="popup__top-wrapper">
+        <h2 class="popup__title">Новый лимит</h2>
+        <button class="popup__close-btn"></button>
+      </div>
+      <div class="popup-bottom-wrapper">
+        <div class="popup__input-wrapper">
+        <input type="number" class="popup__input">
+        <span class="input-currency">руб.</span>
+      </div>
+      <button class="popup__set-limit-btn">Задать лимит</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
