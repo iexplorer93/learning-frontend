@@ -38,7 +38,7 @@ ul, ol {
 }
 
 .header__title{
-  font-size: clamp(6rem, 12vw, 12rem);
+  font-size: clamp(4rem, 12vw, 12rem);
   margin-bottom: 5rem;
 }
 
@@ -164,4 +164,37 @@ ul, ol {
 .active {
   text-decoration: line-through;
   opacity: .3;
+}
+
+@media (max-width: 590px) {
+  .header {
+    margin-left: 0;
+  }
+  .movie-inner {
+    padding: 3rem 2.5rem;
+    height: 50rem;
+  }
+  .movie__search-wrapper {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .movie__search-input {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+  }
+  .movie__search-button {
+    width: 4rem;
+    height: 4rem;
+  }
+  .movie__list-item {
+    padding: 1.8rem 1.4rem;
+  }
+  .movie__list-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .movie__list-button {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }
