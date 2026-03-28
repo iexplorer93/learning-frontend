@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.bored-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+  padding: 10px;
+}
+
+.bored__title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.bored__text {
+  max-width: 700px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.bored__btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  width: 400px;
+  padding: 11px;
+  border: none;
+  background-color: rgb(0, 148, 255);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.bored__btn:active {
+  transform: scale(0.98);
+}

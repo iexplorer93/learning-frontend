@@ -33,7 +33,6 @@ movieListNode.addEventListener('click', function(event) {
     
 })
 
-
 function addMovie() {
   let movieName = inputValueNode.value.trim();
   if (!movieName) return
