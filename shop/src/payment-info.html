@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>iТорговля</title>
+</head>
+<body>
+  <div class="container">
+    <div class="app-content">
+      <a href="./index.html" class="app-content__link">Назад в корзину</a>
+      <div class="payment-wrapper">
+        <div class="payment-address-wrapper">
+          <div class="payment-address-info">
+            <h3 class="address-info__title">Адрес доставки</h3>
+            <p class="address-info__name address-info">Витя Иванов</p>
+            <p class="address-info__street address-info">Ленинградский проспект, 27</p>
+            <p class="address-info__city address-info">Москва, Россия</p>
+            <p class="address-info__number address-info">+7 999 999 99 99</p>
+          </div>
+          <button class="payment-address-btn payment-button">Изменить</button>
+        </div>
+        <div class="payment-pay__wrapper">
+          <div class="payment-pay__info">
+            <h3 class="payment-pay__title">Способ оплаты</h3>
+            <p class="payment-pay__descr"><img src="./img/Icon.png">Оплата картой при получении</p>
+          </div>
+          <button class="payment-pay__btn payment-button">Изменить</button>
+        </div>
+      </div>
+    </div>
+    <div class="app-trash app-trash--payment">
+      <div class="trash-card__wrapper">
+        <h4 class="trash-card__title">Сумма</h4>
+        <div class="trash-card__price-wrapper trash-card__text">
+          <p class="trash-card__price-text">Товары:</p>
+          <p class="trash-card__price-value">$ 5849.37</p>
+        </div>
+        <div class="trash-card__ship-wrapper trash-card__text">
+          <p class="trash-card__ship-text">Доставка:</p>
+          <p class="trash-card__ship-value">$ 6.99</p>
+        </div>
+        <hr>
+        <div class="trash-card__total-wrapper">
+          <p class="trash-card__total-text">Стоимость:</p>
+          <p class="trash-card__total-value">$ 5856.36</p>
+        </div>
+        <hr class="hr-style">
+        <button class="trash-card__btn btn">Разместить заказ</button>
+      </div>
+    </div>
+  </div>
+
+  <!--ADDRESS POPUP -->
+  <div class="address-popup popup">
+    <div class="address-popup__overlay popup-overlay"></div>
+    <div class="address-popup__content popup-content">
+      <form class="address-popup__form">
+        <label for="address-name">Имя</label>
+        <input type="text" id="address-name" placeholder="Витя Иванов" class="address-popup__input">
+        <label for="address-street">Улица, дом</label>
+        <input type="text" id="address-street" placeholder="Ленинградский проспект, 27" class="address-popup__input">
+        <label for="address-city">Город, страна</label>
+        <input type="text" id="address-city" placeholder="Москва, Россия" class="address-popup__input">
+        <label for="address-phone">Телефон</label>
+        <input type="text" id="address-phone" placeholder="+7 999 999 99 99" class="address-popup__input">
+        <button class="address-popup__submit btn">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+ <!--PAYMENTS POPUP -->
+   <div class="payments-popup popup">
+    <div class="payments-popup__overlay popup-overlay"></div>
+    <div class="payments-popup__content popup-content">
+      <form class="payments-popup__form">
+        <label class="payments-popup__label">
+          <input type="radio" name="payment" class="payments-popup__input" checked>
+          <span class="payments-popup__custom-checkbox"></span>
+          Оплата картой при получении
+        </label>
+        <label class="payments-popup__label">
+          <input type="radio" name="payment" class="payments-popup__input">
+          <span class="payments-popup__custom-checkbox"></span>
+          Оплата наличными при получении
+        </label>
+        <button class="payments-popup__submit btn">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

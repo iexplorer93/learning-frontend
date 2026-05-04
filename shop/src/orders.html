@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>iТорговля</title>
+</head>
+<body>
+  <div class="container">
+    <div class="app-content">
+      <a href="./index.html" class="app-content__link">Список товаров</a>
+      <h2 class="basket__title">Заказ #11111</h2>
+      <div class="app-content">
+      <a href="./index.html" class="app-content__link">Назад в корзину</a>
+        <div class="payment-wrapper">
+          <div class="payment-address-wrapper payment-address-wrapper-orders">
+            <div class="payment-address-info">
+              <h3 class="address-info__title">Адрес доставки</h3>
+              <p class="address-info__name address-info">Витя Иванов</p>
+              <p class="address-info__street address-info">Ленинградский проспект, 27</p>
+              <p class="address-info__city address-info">Москва, Россия</p>
+              <p class="address-info__number address-info">+7 999 999 99 99</p>
+            </div>
+          </div>
+          <div class="payment-pay__wrapper payment-pay-wrapper-orders">
+            <div class="payment-pay__info">
+              <h3 class="payment-pay__title">Способ оплаты</h3>
+              <p class="payment-pay__descr"><img src="./img/Icon.png">Оплата картой при получении</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="basket-card basket-card__orders">
+          <img src="./img/apple-watch.png" alt="apple watch" class="basket-img">
+          <div class="basket-card__inner">
+            <h3 class="basket-card__title">Apple Watch</h3>
+            <p class="basket-card__model">Series 5 SE</p>
+            <p class="basket-card__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam </p>
+            <div class="rating">
+              <svg style="width:0; height:0; position:absolute;">
+                <linearGradient id="half-fill" x1="0" x2="100%" y1="0" y2="0">
+                  <stop offset="50%" stop-color="#147d55" />
+                  <stop offset="50%" stop-color="transparent" />
+               </linearGradient>
+              </svg>
+              <div class="stars">
+               <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+               <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star half"><use xlink:href="#star-shape"></use></svg>
+              </div>
+              <span class="score">4.5 / 5</span>
+              <svg style="display:none;">
+                <symbol id="star-shape" viewBox="0 0 24 24">
+                  <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                </symbol>
+             </svg>
+           </div>
+           <div class="basket-card__price-wrapper">
+            <p class="basket-card__price">$ 529.99 x <span>1</span></p>
+           </div>
+          </div>
+        </div>
+        <div class="basket-card basket-card__orders">
+          <img src="./img/iphone11.png" alt="iphone 11" class="basket-img">
+          <div class="basket-card__inner">
+            <h3 class="basket-card__title">Iphone 11</h3>
+            <p class="basket-card__model">Serious Black</p>
+            <p class="basket-card__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam </p>
+            <div class="rating">
+              <svg style="width:0; height:0; position:absolute;">
+                <linearGradient x1="0" x2="100%" y1="0" y2="0">
+                  <stop offset="50%" stop-color="#147d55" />
+                  <stop offset="50%" stop-color="transparent" />
+               </linearGradient>
+              </svg>
+              <div class="stars">
+               <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+               <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star filled"><use xlink:href="#star-shape"></use></svg>
+                <svg class="star half"><use xlink:href="#star-shape"></use></svg>
+              </div>
+              <span class="score">4.5 / 5</span>
+              <svg style="display:none;">
+                <symbol  viewBox="0 0 24 24">
+                  <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                </symbol>
+             </svg>
+           </div>
+           <div class="basket-card__price-wrapper">
+            <p class="basket-card__price">$619.99 x <span>1</span></p>
+           </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="app-trash app-trash--payment">
+      <div class="trash-card__wrapper">
+        <h4 class="trash-card__title">Сумма</h4>
+        <div class="trash-card__price-wrapper trash-card__text">
+          <p class="trash-card__price-text">Товары:</p>
+          <p class="trash-card__price-value">$ 5849.37</p>
+        </div>
+        <div class="trash-card__ship-wrapper trash-card__text">
+          <p class="trash-card__ship-text">Доставка:</p>
+          <p class="trash-card__ship-value">$ 6.99</p>
+        </div>
+        <hr>
+        <div class="trash-card__total-wrapper">
+          <p class="trash-card__total-text">Стоимость:</p>
+          <p class="trash-card__total-value">$ 5856.36</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

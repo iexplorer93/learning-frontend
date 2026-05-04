@@ -1,0 +1,720 @@
+*{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: #F5F5F5;
+  --color-white: #FFFFFF;
+  --color-black: #1A1F16;
+  --font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 126.6rem;
+  margin: 0 auto;
+  padding: 2rem 1.6rem;
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  position: relative;
+}
+
+.app-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: #ccc;
+}
+
+.app-trash {
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 24%;
+}
+
+.trash-title {
+  font-size: 3.9rem;
+  line-height: 5.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: 2rem;
+  padding: .5rem 1.8rem;
+  border-radius: 1.8rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.trash-btn {
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  gap: 0.8rem;
+}
+
+.btn:hover {
+  opacity: 0.93;
+  scale: 1.01;
+}
+
+.btn:active {
+  transform: scale(1.01);
+}
+
+.app-content__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.app-content__card {
+  max-width: 22.3rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.app-content__card:hover {
+  scale: 1.04;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img--container {
+  width: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.2rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content-wrapper {
+  padding: 0 .8rem;
+}
+
+.card-name {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.card-model {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #60695C;
+  margin-bottom: 1.9rem;
+  cursor: pointer;
+}
+
+.card-price--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .8rem;
+}
+
+.card-price {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+}
+
+.card-trash {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;  
+}
+.card-trash:hover {
+  opacity: 0.93;
+  scale: 1.03;
+}
+
+.card-trash:active {
+  transform: scale(1.03);
+} 
+
+.trash-preview-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-left: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+.trash-preview__card {
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trash-preview__card:hover {
+  scale: 1.04;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trash-preview__img {
+  object-fit: cover;
+  width: 6.4rem;
+  height: auto;
+}
+
+.trash-orders {
+  font-size: 3.9rem;
+  line-height: 5.3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trash-list {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-left: 1.9rem;
+}
+
+.trash-list-item {
+  margin-bottom: 1rem;
+}
+
+/*---------------- Стили для страницы с подробной информацией о товаре -----------------*/
+
+.app-content__link {
+  color: var(--color-black);
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.app-content__link::before {
+  content: '<';
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: sans-serif;
+  color: #147d55; /* Основной цвет из скриншота */
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  stroke: #147d55;
+  stroke-width: 2px;
+  fill: none; /* По умолчанию звезды пустые */
+}
+
+.star.filled {
+  fill: #147d55;
+}
+
+.star.half {
+  fill: url(#half-fill);
+}
+
+.score {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.item-descr__wrapper {
+  margin-right: 2.4rem;
+}
+
+.app-content-inner {
+  display: flex;
+  gap: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.item-descr__img {
+  min-width: 25.8rem;
+  background-color: var(--color-white);
+  border-radius: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-descr__img--img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.item-descr__title {
+  font-size: 6.1rem;
+  font-weight: 700;
+  line-height: 8.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.item-descr__model {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  opacity: 0.5;
+  margin-bottom: 0.8rem;
+}
+
+.rating {
+  margin-bottom: 0.8rem;
+}
+
+.item-descr__price {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.item-descr__text {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.item-descr__btn {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 0 2rem;
+}
+
+.item-descr__bot-title {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 0.8rem;
+}
+
+.item-descr__main-text {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #60695C;
+}
+
+/*------------------------ Стили для корзины --------------------------*/
+.basket__title {
+  font-size: 4.88rem;
+  line-height: 6.6rem;
+  font-weight: 400;
+  margin-bottom: 3.4rem;
+}
+
+.basket__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.basket-card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: var(--color-white);
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  max-width: 95%;
+}
+
+.basket-img {
+  width: 18rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.6rem;
+}
+
+.basket-card__title {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.basket-card__model {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #60695C;
+  margin-bottom: 0.8rem;
+}
+
+.basket-card__descr {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-bottom: 3rem;
+}
+
+.basket-card__price-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-card__price {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
+
+.basket-card-btn-wrapper {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-card-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.basket-card-btn-less {
+  color: #E5252C;
+  font-size: 3.4rem;
+}
+
+.basket-card-btn-more {
+  color: #02D693;
+  font-size: 2.4rem;
+}
+
+.basket-card__amount {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
+
+/*---------------- Стили для страницы с информацией о платеже -----------------*/
+
+.app-trash--payment {
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+.payment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.payment-address-wrapper {
+  background-color: var(--color-white);
+  border-radius: 1.3rem;
+  padding: 1.6rem;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-info__title {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.address-info {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.payment-button {
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  border-radius: 1.1rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  padding: .8rem 2.4rem;
+  cursor: pointer;
+  outline: none;
+  max-height: 3.8rem;
+  transition: all 0.3s ease;
+}
+
+.payment-button:hover {
+  opacity: 0.93;
+  scale: 1.01;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.payment-address-btn  {
+  margin-top: 6rem;
+}
+
+.payment-pay__wrapper {
+  background-color: var(--color-white);
+  border-radius: 1.3rem;
+  padding: 1.6rem;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-pay__title {
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.payment-pay__descr {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.payment-pay__btn {
+  margin-top: auto;
+}
+
+.trash-card__wrapper {
+  background-color: var(--color-white);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+}
+
+.trash-card__title {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.trash-card__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #60695C;
+}
+
+.trash-card__total-wrapper {
+  margin: 0.8rem;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  display: flex;
+  justify-content: space-between;
+  color: #E5252C;
+}
+
+.hr-style {
+  margin-bottom: 1.6rem;
+}
+
+.trash-card__btn {
+  margin: 0 auto;
+}
+
+/* address-popup */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.popup-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: relative;
+  background: var(--color-white);
+  padding: 3.2rem;
+  border-radius: 1.5rem;
+  z-index: 10;
+}
+
+.address-popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-popup__form label {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  opacity: 0.5;
+  margin-bottom: 0.8rem;
+}
+
+.address-popup__input {
+  width: 59rem;
+  padding: 1.6rem 2.4rem;
+  margin-bottom: 2.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 1.3rem;
+  box-shadow: 7px 9px 17px 1px rgba(34, 60, 80, 0.12);
+  outline: none;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-family: var(--font-family);
+}
+
+.address-popup__submit {
+  margin: 1.6rem 0;
+}
+
+/* payments-popup */
+
+.popup-content, .payments-popup__content {
+  padding: 5.6rem 4.8rem;
+  width: 67rem;
+}
+
+.payments-popup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payments-popup__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  color: #888; /* Цвет текста как на фото */
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 3.9rem;
+}
+
+.payments-popup__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.payments-popup__custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #5a5d56; /* Цвет рамки */
+  border-radius: 4px;        /* Скругление */
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.payments-popup__custom-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background-color: #000;    /* Цвет заливки */
+  border-radius: 2px;
+  opacity: 0;                /* Скрываем */
+  transition: opacity 0.2s;
+}
+
+/* Показываем квадрат, когда скрытый инпут отмечен */
+.payments-popup__input:checked + .payments-popup__custom-checkbox::before {
+  opacity: 1;
+}
+
+.payments-popup__input:focus + .payments-popup__custom-checkbox {
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* orders-popup */
+
+.basket-card__orders {
+  margin-top: 2.4rem;
+  width: 90%;
+}
+
+.payment-address-wrapper-orders, 
+.payment-pay-wrapper-orders{
+  max-width: 90%;
+}
+
